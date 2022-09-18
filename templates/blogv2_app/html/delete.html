@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{%block title %}
+Delete Post
+{% endblock %}
+
+
+{% block css %}
+h1  {
+    font-family: sans-serif;
+    color: #FFFAFA;
+    font-size: 25px;
+    }
+a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    }
+
+{% endblock %}
+
+
+<!-- NAVIGATIONAL BAR -->
+
+{% block link %}http://127.0.0.1:8000/article/{{ article.pk }}/{% endblock %}
+{% block active %}Posts / {{ article.title }} / delete{% endblock %}
+
+{% block link2 %}#{% endblock %}
+{% block item2 %}link{% endblock %}
+
+{% block link3 %}#{% endblock %}
+{% block item3 %}link{% endblock %}
+
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <h1>ARE YOU SURE YOU WANT TO DELETE THIS ({{ article.title }}) ?</h1>
+    <button>Yes</button>
+    <a href="{% url 'articleview' article.pk %}"><button type="button">No</button></a>
+</form>
+{% endblock %}

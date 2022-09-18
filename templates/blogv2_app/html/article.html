@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{%block title %}
+{{ article.page_title }}
+{% endblock %}
+
+
+
+
+
+<!-- NAVIGATIONAL BAR -->
+
+{% block link %}http://127.0.0.1:8000/{% endblock %}
+{% block active %}Article / {{ article.title }}{% endblock %}
+
+{% block link2 %}http://127.0.0.1:8000/articles/my-articles/{% endblock %}
+{% block item2 %}My Articles{% endblock %}
+
+{% block link3 %}http://127.0.0.1:8000/articles/add/{% endblock %}
+{% block item3 %}Add{% endblock %}
+
+{% block header %}<h1>{{ article.title }}</h1>{% endblock %}
+{% block content %}
+
+
+<p>{{ article.content }}</p>
+
+<h5>Author: {{ article.author.username }}</h5>
+
+<h5>Status: {{ article.status }}</h5>
+
+<h5>Date: {{ article.date }}</h5>
+
+<a href="{% url 'articlesview' %}"><button type="button">Back</button></a>
+
+{% if article.author == request.user %}
+    <a href="{% url 'updateview' article.pk %}"><button type="button">Update</button></a>
+    <a href="{% url 'deleteview' article.pk %}"><button type="button">Delete</button></a>
+{% endif %}
+{% endblock %}

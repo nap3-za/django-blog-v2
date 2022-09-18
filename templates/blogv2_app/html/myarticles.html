@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Articles
+{% endblock %}
+
+<!-- NAVIGATIONAL BAR -->
+
+{% block link %}http://127.0.0.1:8000/{% endblock %}
+{% block active %}Articles{% endblock %}
+
+{% block link2 %}#{% endblock %}
+{% block item2 %}link{% endblock %}
+
+{% block link3 %}http://127.0.0.1:8000/articles/add/{% endblock %}
+{% block item3 %}Add{% endblock %}
+
+
+<!-- BODY -->
+{% block header %}<h1>Articles</h1>{% endblock %}
+{% block content %}
+
+
+{% for article in articles %}
+
+    <h3><a href="{% url 'articleview' article.pk %}">{{ article.title }}</a></h3>
+    <p>{{ article.sum }}</p>
+    <h5>Date: {{ article.date }}</h5>
+<br>
+{% endfor %}
+<a href="http://127.0.0.1:8000/"><button type="button">Back</button></a>
+{% endblock %}

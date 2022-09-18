@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+LogIn
+{% endblock %}
+
+
+<!-- NAVIGATIONAL BAR -->
+
+{% block item %}http://127.0.0.1:8000/{% endblock %}
+{% block active %}Articles{% endblock %}
+<!-- BODY -->
+
+{% block header %}<h1>LogIn</h1>{% endblock %}
+{% block content %}
+
+
+<br>
+<form method="post" action="">   
+{% csrf_token %}
+
+<span>Username: </span>
+<p>
+<input type="text" name="username" maxlength="250" required="" id="id_username" class="username">
+</p>
+
+<br>
+<span>Password: </span>
+<p>
+<input type="password" name="password" maxlength="125" required="" id="id_password" class="password">
+</p>
+
+<a href="http://127.0.0.1:8000/"><button type="button">Back</button></a>
+<button type="submit">LogIn</button>
+</form>
+<br>
+<br>
+<br>
+
+{% endblock %}

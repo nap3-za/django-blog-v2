@@ -1,0 +1,129 @@
+body {
+                margin: 20px 0px 0px 15px;
+                background-color: rgba(3, 48, 85, 0.034);
+                }
+                
+/* div {
+                border-left: 3px solid rgb(59, 68, 75);
+                padding-left: 50px;
+                padding-top: 0px;
+                margin: 0px 0px 0px 0px;
+                top: 0px;
+                } */
+       
+#body {
+    padding-left: 28%;
+    padding-top: 15px;
+    
+}
+
+h1 {
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    color: rgb(27, 27, 27);    
+    font-weight: lighter;
+    padding-left: 23%;
+}
+                    
+h2, h3, h5, h4, p {
+                    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+                    color: rgb(27, 27, 27);
+                    }
+a {
+                    text-decoration: none;
+                    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+                    color: rgba(18, 93, 163, 0.733);
+                    font-weight: 300;
+                    }
+
+
+                    
+span {
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    color: rgb(27, 27, 27);
+        }
+                    
+hr {
+    color: rgba(241, 240, 240, 0.959);
+    padding-left: 5px;
+    padding-right: 5px;
+                    }
+                    
+.title, .pg_title, .content, .sum {
+                        border: 1px solid rgb(6, 32, 61);
+                        border-radius: 5px;
+                        padding-bottom: 12px;
+                    }
+ @media screen 
+ and (min-width: 210px)
+and (max-width: 600px) {
+div {
+  padding-left: 0px
+                }   
+#body {
+            padding-left: 10px;
+            padding-top: 0px;
+                    
+                }
+                
+h1 {
+                    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+                    color: rgb(27, 27, 27);    
+                    font-weight: lighter;
+                    padding-left: 5px;            
+            }
+ 
+.one {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.zero {
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+        }
+
+               /* 
+@media screen 
+and (min-width: 400px) {
+body {
+                    margin: 15px 0px 0px 45px;
+                    background-color: rgb(27, 27, 27);
+                    }
+                }                 
+                
+@media screen 
+and (min-width: 520px) {
+body {
+                    margin: 15px 0px 0px 50px;
+                    background-color: rgb(27, 27, 27);
+                    }
+                }                 
+
+@media screen 
+and (min-width: 680px) {
+body {
+                    margin: 15px 0px 0px 120px;
+                    background-color: rgb(27, 27, 27);
+                    }
+                }                        
+    
+@media screen 
+and (min-width: 780px) {
+body {
+                    margin: 15px 0px 0px 150px;
+                    background-color: rgb(27, 27, 27);
+                    }
+                }     
+    
+@media screen 
+and (min-width: 880px) {
+body {
+                    margin: 15px 0px 0px 240px;
+                    background-color: rgb(27, 27, 27);
+                    }
+                }  */

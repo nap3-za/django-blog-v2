@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Post
+{% endblock %}
+
+<!-- NAVIGATIONAL BAR -->
+
+{% block item %}http://127.0.0.1:8000/{% endblock %}
+{% block active %}Posts / Update{% endblock %}
+
+{% block link2 %}#{% endblock %}
+{% block item2 %}link{% endblock %}
+
+{% block link3 %}http://127.0.0.1:8000/articles/add/{% endblock %}
+{% block item3 %}Add{% endblock %}
+
+{% block header %}<h1>Update Post</h1>{% endblock %}
+{% block content %}
+<form method="post" action="">   
+{% csrf_token %}
+
+<span>Title: </span>
+<p>
+<input type="text" name="title" maxlength="250" required="" id="id_title" class="title" value="{{ title }}" autocomplete="{{ title }}">
+</p>
+<br>
+<span>Page Title: </span>
+<p>
+<input type="text" name="page_title" maxlength="250" required="" id="id_page_title" class="pg_title" value="{{ pg_title }}" autocomplete="{{ pg_title }}">
+</p>
+
+<br>
+<span>Content: </span>
+<p>
+<textarea name="content" cols="40" rows="10" required="" id="id_content" class="content">{{ content }}
+</textarea>
+<br>
+<br>
+<span>Summary: </span>
+<p>
+<input type="text" name="sum" maxlength="125" required="" id="id_sum" class="sum" value="{{ sum }}" autocomplete="{{ sum }}">
+</p>
+
+<br>
+<span>Status: </span>
+<p>
+<select name="status" id="id_status">
+    <option value="draft">Draft</option>
+    <option value="published" select="">Published</option>
+</select>
+</p>
+
+<a href="http://127.0.0.1:8000/"><button type="button">Back</button></a>
+<button type="submit">Update</button>
+<a href="#"><button type="button">Delete</button></a>
+</form>
+<br>
+<br>
+<br>
+{% endblock %}
+
+
+        
+

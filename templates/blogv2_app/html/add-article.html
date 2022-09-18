@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Post
+{% endblock %}
+
+
+<!-- NAVIGATIONAL BAR -->
+
+{% block item %}http://127.0.0.1:8000/{% endblock %}
+{% block active %}Articles / add{% endblock %}
+
+{% block link2 %}#{% endblock %}
+{% block item2 %}link{% endblock %}
+
+{% block link3 %}#{% endblock %}
+{% block item3 %}link{% endblock %}
+
+
+<!-- BODY -->
+
+{% block header %}<h1>Add Post</h1>{% endblock %}
+{% block content %}
+
+
+<br>
+<form method="post" action="">   
+{% csrf_token %}
+
+<span>Title: </span>
+<p>
+<input type="text" name="title" maxlength="250" required="" id="id_title" class="title">
+</p>
+
+<br>
+<span>Page Title: </span>
+<p>
+<input type="text" name="page_title" maxlength="250" required="" id="id_page_title" class="pg_title">
+</p>
+
+<br>
+<span>Content: </span>
+<p>
+<textarea name="content" cols="40" rows="10" required="" id="id_content" class="content">
+</textarea>
+</p>
+
+<br>
+<span>Summary: </span>
+<p>
+<input type="text" name="sum" maxlength="125" required="" id="id_sum" class="sum">
+</p>
+
+<br>
+<span>Status: </span>
+<p>
+<select name="status" id="id_status">
+    <option value="draft">Draft</option>
+    <option value="published" select="">Published</option>
+</select>
+</p>
+<br>
+<a href="http://127.0.0.1:8000/"><button type="button">Back</button></a>
+<button type="submit">Add</button>
+</form>
+<br>
+<br>
+<br>
+
+{% endblock %}
